@@ -1,6 +1,6 @@
 version: 1
 rules:
-rules:
+
   - expected: Microsoft
     pattern:
       - /[Mm]icro[Ss]oft/
