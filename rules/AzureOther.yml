@@ -3,8 +3,9 @@ rules:
 
   - expected: Microsoft
     pattern:
-      - /[Mm]icro[Ss]oft/
+      - /(docs\.|on)?[Mm]icro[Ss]oft/
       - マイクロソフト
+    regexpMustEmpty: $1
     specs:
       - from: microsoft
         to:   Microsoft
@@ -12,5 +13,9 @@ rules:
         to:   Microsoft
       - from: マイクロソフト
         to:   Microsoft
-
+      - from: docs.microsoft.com
+        to:   docs.microsoft.com
+      - from: onmicrosoft.com
+        to:   onmicrosoft.com
+        
   - expected: PowerShell

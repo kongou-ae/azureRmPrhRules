@@ -2,10 +2,13 @@ version: 1
 rules:
 
   - expected: Azure Stack
-    pattern: /[Aa]zure\s*[Ss]tack/
+    pattern: /(Microsoft\.)?[Aa]zure\s*[Ss]tack/
+    regexpMustEmpty: $1
     specs:
       - from: AzureStack
         to:   Azure Stack
+      - from: Microsoft.AzureStack
+        to:   Microsoft.AzureStack
   
   - expected: Azure Stack Development Kit
     pattern:  
