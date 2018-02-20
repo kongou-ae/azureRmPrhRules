@@ -1,0 +1,14 @@
+version: 1
+rules:   
+
+  - expected: Storage Account
+    pattern:
+      - /[Ss]torage\s*[Aa]ccount/
+      - ストレージアカウント
+    specs:
+      - from: storageaccount
+        to:   Storage Account
+      - from: StorageAccount
+        to:   Storage Account
+      - from: ストレージアカウント
+        to:   Storage Account

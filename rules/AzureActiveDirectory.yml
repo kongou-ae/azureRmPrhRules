@@ -1,0 +1,19 @@
+version: 1
+rules:
+
+  - expected: Azure Active Directory
+    pattern:  
+      - /[Aa]zure\s*[Aa]ctive\s*[Dd]irectory/
+      - AAD
+    specs:
+      - from: AzureActiveDirectory
+        to:   Azure Active Directory
+      - from: AAD
+        to:   Azure Active Directory
+        
+  - expected: Active Directory Federation Services
+    pattern:
+      - ADFS
+    specs:
+      - from: ADFS
+        to:   Active Directory Federation Services

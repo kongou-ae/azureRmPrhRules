@@ -1,0 +1,63 @@
+version: 1
+rules:
+
+  - expected: VPN Gateway
+    pattern:
+      - /(vpn|Vpn|VPN)\s*[Gg]ateway/
+      - /[Vv]irtual\s*[Pp]rivate\s*[Gg]ateway/
+    specs:
+      - from: VpnGateway
+        to:   VPN Gateway
+      - from: virtualPrivate gateway
+        to:   VPN Gateway
+        
+  - expected: Virtual Network
+    pattern:  
+      - /[Vv]irtual\s*[Nn]etwork/
+      - /[Vv][Nn][Ee][Tt]/
+    specs:
+      - from: virtualnetwork
+        to:   Virtual Network
+      - from: vneT
+        to:   Virtual Network
+
+  - expected: Site-To-Site
+    pattern:  
+      - /[Ss]ite-*[Tt]o-*[Ss]ite/
+      - /[Ss]2[Ss]/
+    specs:
+      - from: siteToSite
+        to:   Site-To-Site
+      - from: s2s
+        to:   Site-To-Site
+        
+  - expected: IPsec VPN
+    pattern:
+      - /[Ii][Pp][Ss][Ee][Cc]\s*(Vpn|vpn|VPN)/
+    specs:
+      - from: ipsecVpn
+        to:   IPsec VPN
+      - from: ipsec vpn
+        to:   IPsec VPN
+  
+  - expected: Network Interface
+    pattern:
+      - /[Nn]etwork\s*[Ii]nterface/
+      - /(nic|NIC|Nic)/
+    specs:
+      - from: NIC
+        to:   Network Interface
+      - from: network interface
+        to:   Network Interface
+  
+  - expected: Public IP Address
+    pattern: 
+      - /[Pp]ublic\s*[Ii][Pp]\s*[Aa]ddress/
+      - /(pip|PIP|Pip)/
+    specs:
+      - from: PIP
+        to:   Public IP Address
+      - from: pip
+        to:   Public IP Address
+      - from: public ip address
+        to:   Public IP Address

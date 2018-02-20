@@ -1,0 +1,16 @@
+version: 1
+rules:
+rules:
+  - expected: Microsoft
+    pattern:
+      - /[Mm]icro[Ss]oft/
+      - マイクロソフト
+    specs:
+      - from: microsoft
+        to:   Microsoft
+      - from: MicroSoft
+        to:   Microsoft
+      - from: マイクロソフト
+        to:   Microsoft
+
+  - expected: PowerShell

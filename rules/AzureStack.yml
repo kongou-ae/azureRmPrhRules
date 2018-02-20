@@ -1,0 +1,35 @@
+version: 1
+rules:
+
+  - expected: Azure Stack
+    pattern: /[Aa]zure\s*[Ss]tack/
+    specs:
+      - from: AzureStack
+        to:   Azure Stack
+  
+  - expected: Azure Stack Development Kit
+    pattern:  
+      - /[Aa]zure\s*[Ss]tack\s*[Dd]evelopment\s*[Kk]it/
+      - /[Aa]zure\s*[Ss]tack\s*[Dd]evelop\s*[Kk]it/
+      - ASDK
+      - asdk
+    specs:
+      - from: azure stack development kit
+        to:   Azure Stack Development Kit
+      - from: azure stack develop kit
+        to:   Azure Stack Development Kit
+        
+  - expected: Azure Stack Integrated System
+    pattern:
+      - /[Aa]zure\s*[Ss]tack\s*[Ii]ntegra(ted|te)\s*[Ss]ystem/
+    specs:
+      - from: azure stack integrate system
+        to:   Azure Stack Integrated System
+      - from: AzureStackIntegrateSystem
+        to:   Azure Stack Integrated System
+        
+  - expected: Azure Stack Operator
+    pattern:  /[Aa]zure\s*[Ss]tack\s*[Oo]perator/
+    specs:
+      - from: azureStack operator
+        to:   Azure Stack Operator

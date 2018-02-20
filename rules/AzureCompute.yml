@@ -1,0 +1,17 @@
+version: 1
+rules:
+
+  - expected: Virtual Machine
+    pattern: 
+      - /[Vv]irtual\s*[Mm]achine/
+      - 仮想マシン
+      - VM
+    specs:
+      - from: Virtual machine
+        to:   Virtual Machine
+      - from: virtual machine
+        to:   Virtual Machine
+      - from: 仮想マシン
+        to:   Virtual Machine
+      - from: VM
+        to:   Virtual Machine

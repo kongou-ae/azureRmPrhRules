@@ -1,0 +1,9 @@
+version: 1
+
+imports:
+  - ./rules/AzureActiveDirectory.yml
+  - ./rules/AzureCompute.yml
+  - ./rules/AzureNetwork.yml
+  - ./rules/AzureOther.yml
+  - ./rules/AzureStack.yml
+  - ./rules/AzureStorage.yml
